@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-28T05:03:28.733Z",
+  "title": "Design System: Scene / split",
+  "extensions": {
+    "colorMeta": {
+      "green": {
+        "role": "primary",
+        "displayName": "Deep enterprise green"
+      },
+      "action": {
+        "role": "primary",
+        "displayName": "Near-black action"
+      },
+      "stone": {
+        "role": "neutral",
+        "displayName": "Warm stone source surface"
+      },
+      "canvas": {
+        "role": "neutral",
+        "displayName": "White editorial canvas"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Large normal-weight page heading."
+      },
+      "body": {
+        "displayName": "Body and UI",
+        "purpose": "Controls, copy, labels and table data."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "state-transition",
+        "value": "180ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Hover fill and text changes only; disabled under reduced motion."
+      },
+      {
+        "name": "focus-ring",
+        "value": "2px solid, 4px offset",
+        "purpose": "Immediate blue ring on light surfaces; white ring inside green controls."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "value": "1280px"
+      },
+      {
+        "name": "tablet",
+        "value": "1000px"
+      },
+      {
+        "name": "stacked",
+        "value": "740px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Upload action on light surfaces.",
+      "html": "<button class=\"ds-primary\">Upload video</button>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 24px;border:1px solid transparent;border-radius:var(--radius-control);font-family:var(--font-body);font-size:14px;font-weight:500;background:var(--color-accent);color:var(--color-on-accent);cursor:pointer;transition:background-color var(--dur-short) var(--ease-out)}.ds-primary:hover{background:var(--color-accent-hover)}.ds-primary:focus-visible{outline:2px solid var(--color-focus);outline-offset:4px}.ds-primary:active{transform:translateY(1px)}.ds-primary:disabled{opacity:.48;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}"
+    },
+    {
+      "name": "Inverted primary button",
+      "kind": "button",
+      "refersTo": "button-inverted",
+      "description": "Split or download action in green controls.",
+      "html": "<div class=\"ds-green\"><button class=\"ds-primary\">Split video</button></div>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 24px;border:1px solid transparent;border-radius:var(--radius-control);font-family:var(--font-body);font-size:14px;font-weight:500;background:var(--color-accent);color:var(--color-on-accent);cursor:pointer;transition:background-color var(--dur-short) var(--ease-out)}.ds-primary:hover{background:var(--color-accent-hover)}.ds-primary:focus-visible{outline:2px solid var(--color-focus);outline-offset:4px}.ds-primary:active{transform:translateY(1px)}.ds-primary:disabled{opacity:.48;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}.ds-green{background:var(--color-green);padding:24px;border-radius:var(--radius-media)}.ds-green .ds-primary{background:var(--color-on-green);color:var(--color-green)}.ds-green .ds-primary:hover{background:var(--color-selection)}.ds-green .ds-primary:focus-visible{outline-color:var(--color-on-green)}"
+    },
+    {
+      "name": "Clear video",
+      "kind": "button",
+      "description": "Selection reset, visually separate from destructive trash.",
+      "html": "<button class=\"ds-clear\">Clear video</button>",
+      "css": ".ds-clear{min-height:44px;padding:0 8px;border:0;background:transparent;color:var(--color-ink-2);font-family:var(--font-body);font-size:14px;text-decoration:underline;text-underline-offset:5px;cursor:pointer}.ds-clear:hover{background:var(--color-paper-4);color:var(--color-ink)}.ds-clear:focus-visible{outline:2px solid var(--color-focus);outline-offset:4px}.ds-clear:active{transform:translateY(1px)}"
+    },
+    {
+      "name": "Sensitivity range",
+      "kind": "input",
+      "description": "Native range control on the green settings surface.",
+      "html": "<div class=\"ds-setting\"><label for=\"ds-sensitivity\">Detection sensitivity</label><input id=\"ds-sensitivity\" type=\"range\" min=\"1\" max=\"99\" value=\"65\" /></div>",
+      "css": ".ds-setting{padding:24px;background:var(--color-green);color:var(--color-on-green);border-radius:var(--radius-media);font-family:var(--font-body);font-size:14px}.ds-setting input{display:block;width:100%;height:44px;accent-color:var(--color-on-green);cursor:pointer}.ds-setting input:focus-visible{outline:2px solid var(--color-on-green);outline-offset:4px}.ds-setting input:disabled{opacity:.48;cursor:not-allowed}"
+    },
+    {
+      "name": "Utility navigation",
+      "kind": "nav",
+      "description": "One real home destination without invented menu items.",
+      "html": "<nav class=\"ds-nav\"><a href=\"/\">scene / split</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;min-height:96px;border-bottom:1px solid var(--color-rule)}.ds-nav a{color:var(--color-ink);font-family:var(--font-display);font-size:25px;font-weight:500;letter-spacing:-.75px;text-decoration:none}.ds-nav a:hover{color:var(--color-green)}.ds-nav a:focus-visible{outline:2px solid var(--color-focus);outline-offset:4px}"
+    },
+    {
+      "name": "Source surface",
+      "kind": "card",
+      "refersTo": "source-surface",
+      "description": "Upload and actual source-video region; no simulated footage.",
+      "html": "<section class=\"ds-source\"><span>Source footage</span><h2>Start with a video.</h2></section>",
+      "css": ".ds-source{padding:28px;background:var(--color-paper-2);color:var(--color-ink);border-radius:var(--radius-media);font-family:var(--font-body)}.ds-source span{font-size:14px;color:var(--color-ink-2)}.ds-source h2{margin:48px 0;font-family:var(--font-display);font-size:36px;font-weight:400;letter-spacing:-1.1px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Editorial video workbench",
+    "overview": "The user's supplied enterprise-editorial reference sets the visual direction. A white canvas, tightly set display type, quiet rules, and rounded media surround a functional video tool. Deep green identifies the settings work area; it is not decorative accent coverage.\n\nThe existing product name and controls remain. This is not Cohere branding, and it uses no proprietary Cohere assets. Uploaded footage supplies the imagery; empty states never substitute stock pictures, fake dashboards, trust logos, or commercial claims.",
+    "keyCharacteristics": [
+      "Large normal-weight display typography with a separate workhorse UI face.",
+      "White editorial space, warm stone media surfaces, and deep-green controls.",
+      "Pill primary actions, underlined secondary actions, and thin list rules.",
+      "Standard video controls and a seekable scene timeline."
+    ],
+    "rules": [
+      {
+        "name": "The Footage Rule",
+        "body": "Video remains on a true-black ground with no brand tint, duotone, color filter, or decorative overlay that changes the uploaded image.",
+        "section": "colors"
+      },
+      {
+        "name": "The Quiet Weight Rule",
+        "body": "Size and surface contrast establish hierarchy. Most headings are weight 400; controls and filenames use 500. Labels remain sentence case and untracked.",
+        "section": "typography"
+      }
+    ],
+    "dos": [
+      "Do use the local display/body font pairing and normal-weight hierarchy.",
+      "Do keep source footage visually unchanged.",
+      "Do preserve familiar controls, real processing states, and usable mobile scrolling.",
+      "Do distinguish clearing the workspace from deleting stored files."
+    ],
+    "donts": [
+      "Don't reintroduce neon accents, decorative gradients, heavy shadows, or fake metrics.",
+      "Don't add customer logos, photography, or product claims not supplied by the user.",
+      "Don't use proprietary Cohere identity or font assets.",
+      "Don't hide focus, replace the source preview with a mockup, or widen the mobile page for table columns."
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+[
+ {
+  "scope": "app",
+  "shape": "app screen",
+  "theme": "midnight",
+  "axes": "dark/grotesk-sans/cool",
+  "nav": "single top bar",
+  "footer": "quiet utility line",
+  "imagery": "uploaded source footage",
+  "photos": [],
+  "entry": "web/src/App.tsx",
+  "signature": "seekable detected-scene timeline",
+  "waived": [
+   "7b: house black and white palette"
+  ],
+  "prompt": "Lossless scene-change video splitter with Rust and TypeScript",
+  "fingerprint": "black workbench, lime controls, source and settings split",
+  "sections": [
+   "source",
+   "settings",
+   "timeline",
+   "clips"
+  ],
+  "date": "2026-10-28",
+  "mode": "build"
+ }
+]

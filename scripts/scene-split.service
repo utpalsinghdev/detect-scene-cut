@@ -1,0 +1,19 @@
+[Unit]
+Description=Scene split video workbench
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+WorkingDirectory=%h/work/clip-on-scene-chagne
+Environment=PORT=1900
+Environment=PATH=/usr/local/bin:/usr/bin:/bin
+ExecStart=/bin/bash %h/work/clip-on-scene-chagne/scripts/serve.sh
+Restart=on-failure
+RestartSec=5
+KillSignal=SIGINT
+TimeoutStopSec=20
+NoNewPrivileges=true
+UMask=0077
+
+[Install]
+WantedBy=default.target
